@@ -1,0 +1,27 @@
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  
+  
+  <h3>Renter name: {{renter.Rname}}</h3>
+  <h3>Renter ID: {{renter.Rid}}</h3>
+  <h3>Renter location: {{renter.Rlocation1}}</h3>
+  <h3>Renter Contact: {{renter.Rcontact}}</h3>
+  <h3>Renter location2: {{renter.location2}}</h3>
+  <h3>Renter Gender: {{renter.Tgender}}</h3>
+  <h3>Renter Medium: {{renter.Tmedium}}</h3>
+
+  
+  
+  <p><a href="logout">logout</a></p>
+  <p><a href="r_list">Renter list</a></p>
+  <p><a href="ownerPostList">posts</a></p>
+
+  
+  
+{% else %}
+  <p>You are not logged in</p>
+  <a href="">login</a>
+{% endif %}
+{% endblock %}
